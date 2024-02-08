@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./add-project-overlay.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,700;1,400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Miriam Libre:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap"
+    />
+  </head>
+  <body>
+    <div class="add-project-overlay">
+      <form class="group-form">
+        <div class="frame-child3"></div>
+        <div class="message-solid-1-33"></div>
+        <div class="plus-solid-21"></div>
+        <div class="new-project-wrapper">
+          <h3 class="new-project">New Project</h3>
+        </div>
+        <div class="invite-collaborator">
+          <div class="project-title">
+            <div class="search-bar3">
+              <b class="project-title1">Project Title</b>
+            </div>
+            <div class="search-bar4">
+              <input class="title" placeholder="title..." type="text" />
+
+              <div class="search-bar-child1"></div>
+            </div>
+          </div>
+          <div class="description-group">
+            <b class="description2">Description</b>
+            <div class="search-bar5">
+              <input
+                class="whats-the-project"
+                placeholder="what’s the project about..."
+                type="text"
+              />
+
+              <div class="search-bar-child2"></div>
+            </div>
+          </div>
+          <div class="add-collaborator-invite-error">
+            <b class="add-collaborator1">Add Collaborator</b>
+          </div>
+          <div class="frame-email-address">
+            <div class="search-bar6">
+              <input class="search2" placeholder="Search..." type="text" />
+
+              <img
+                class="magnifying-glass-solid-1-icon3"
+                alt=""
+                src="./public/magnifyingglasssolid-1.svg"
+              />
+
+              <div class="search-bar-child3"></div>
+            </div>
+          </div>
+          <div class="add-collaborator-invite-error1">
+            <b class="cant-find-collaborator1"
+              >Can’t find collaborator? Invite him/her via email</b
+            >
+          </div>
+          <div class="create-project-button">
+            <div class="email-input">
+              <div class="email-address1">Email Address</div>
+              <div class="search-bar7">
+                <input
+                  class="collaboratorgmailcom1"
+                  placeholder="collaborator@gmail.com"
+                  type="text"
+                />
+
+                <div class="search-bar-child4"></div>
+                <img
+                  class="magnifying-glass-solid-1-icon4"
+                  alt=""
+                  src="./public/magnifyingglasssolid-1-1.svg"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="frame-wrapper2">
+          <button class="group-button" id="groupButton">
+            <div class="frame-child4"></div>
+            <b class="create-project">CREATE PROJECT</b>
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <script>
+      var groupButton = document.getElementById("groupButton");
+      if (groupButton) {
+        groupButton.addEventListener("click", function (e) {
+          window.location.href = "./dashboard-projects-view.html";
+        });
+      }
+      </script>
+  </body>
+</html>
