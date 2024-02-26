@@ -1,5 +1,4 @@
 # feedbak - Simplifying Collaboration and Project Management
-![](assets/feedbak_full_logo_blue.png)
 
 # Project Description
 Feedbak is a web platform that aims to make teamwork feel as natural and easy as chatting with friends. While there are many great project management tools out there, they can be tricky for people new to this kind of software. You often end up jumping between different tabs or tools, and it starts to feel like a chore.
