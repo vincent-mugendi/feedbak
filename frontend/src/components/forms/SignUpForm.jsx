@@ -10,6 +10,9 @@ const SignUpForm = () => {
     password: '',
     confirmPassword: ''
   });
+  const [error, setError] = useState('');
+  const [loading, setLoading] = useState(false);
+  const [successMessage, setSuccessMessage] = useState('');
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -18,12 +21,55 @@ const SignUpForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Add your form submission logic here
-    console.log(formData);
+    if (formData.password !== formData.confirmPassword) {
+      setError('Passwords do not match');
+      return;
+    }
+
+    // Set loading state
+    setLoading(true);
+
+    fetch('http://localhost:5000/api/signup', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(formData)
+    })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Failed to sign up user');
+        }
+        return response.json();
+      })
+      .then(data => {
+        console.log(data);
+        // Reset the form fields and show success message
+        setFormData({
+          firstName: '',
+          lastName: '',
+          username: '',
+          email: '',
+          password: '',
+          confirmPassword: ''
+        });
+        setError('');
+        setSuccessMessage('User created successfully');
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        setError('Failed to sign up user');
+      })
+      .finally(() => {
+        // Reset loading state
+        setLoading(false);
+      });
   };
 
   return (
     <form onSubmit={handleSubmit} className="sign-up-form">
+      {error && <div className="error">{error}</div>}
+      {successMessage && <div className="success">{successMessage}</div>}
       <div className="form-group">
         <label htmlFor="firstName">First Name</label>
         <input
@@ -96,7 +142,9 @@ const SignUpForm = () => {
           required
         />
       </div>
-      <button type="submit">Sign Up</button>
+      <button type="submit" disabled={loading}>
+        {loading ? 'Signing up...' : 'Sign Up'}
+      </button>
     </form>
   );
 };
