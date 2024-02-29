@@ -1,0 +1,46 @@
+/* Form.css */
+.form-card {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    /* Ensure padding is included in the width */
+}
+
+.input-field:hover {
+    border: 1px solid #FFCB05;
+}
+
+
+#project-deadline {
+    border: 1px solid #ccc;
+    padding: 7px;
+    border-radius: 6px;
+}
+
+#project-deadline:hover {
+    border: 1px solid #FFCB05;
+}
+.submit-button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+    /* Darker shade on hover */
+}
+

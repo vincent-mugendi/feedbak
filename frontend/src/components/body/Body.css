@@ -1,0 +1,38 @@
+.body {
+    color: black;
+}
+
+.welcome-msg {
+    margin-top: 30vh;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.add-new-project {
+    margin-top: 12vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 19px;
+
+}
+
+.add-new-project:hover {
+    text-decoration: underline  #FFCB05;
+    cursor: pointer;
+}
+
+.plus-icon {
+    width: 2.5vw;
+    margin-right: 20px;
+}
+
+.plus-icon:hover {
+    cursor: pointer;
+}
+
+
+
+
+

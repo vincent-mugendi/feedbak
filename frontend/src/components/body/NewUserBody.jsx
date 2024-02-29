@@ -1,15 +1,17 @@
 // Body.js
 import React from 'react';
-import WelcomeMsg from './WelcomeMessage';
+import WelcomeMessage from './WelcomeMsg';
 import StartProjectButton from './StartProjectButton';
 
-const Body = () => {
+import './Body.css'
+
+const NewUserBody = () => {
     return (
         <div className="body">
-            <WelcomeMsg />
+            <WelcomeMessage />
             <StartProjectButton />
         </div>
     );
 };
 
-export default Body;
+export default NewUserBody;

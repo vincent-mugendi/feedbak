@@ -1,9 +1,13 @@
 // WelcomeMessage.js
 import React from 'react';
+import './Body.css';
+
 
 const WelcomeMessage = () => {
     return (
-        <p>Welcome to Feedbak!</p>
+        <>
+        <p className="welcome-msg"> ------------- Welcome to Feedbak!</p>
+        </>
     );
 };
 
