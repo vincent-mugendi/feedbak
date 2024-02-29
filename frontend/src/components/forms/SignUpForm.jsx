@@ -140,6 +140,7 @@ const SignUpForm = () => {
           value={formData.confirmPassword}
           onChange={handleChange}
           required
+          
         />
       </div>
       <button type="submit" disabled={loading}>
