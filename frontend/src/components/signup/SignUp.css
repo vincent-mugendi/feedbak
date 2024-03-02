@@ -1,0 +1,15 @@
+.login {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 5% 25%;
+}
+
+.login a{
+    text-decoration: none;
+    color: blue;
+}
+
+.login a:hover {
+    color: #d6af10;
+}

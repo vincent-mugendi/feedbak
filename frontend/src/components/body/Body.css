@@ -1,16 +1,48 @@
 .body {
-    color: black;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    /* Set height to full viewport height */
+    margin: 0;
+    /* Remove default margin */
+}
+
+header {
+    align-self: start;
+    /* Align header to the start of the grid */
 }
 
 .welcome-msg {
-    margin-top: 30vh;
     font-size: 2rem;
+    display: inline-block;
+    margin-bottom: 0;   
+}
+
+.welcome-msg p {
     display: flex;
-    justify-content: center;
+    border-right: 3px solid;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 2s steps(39), cursor .4s step-end infinite alternate;
+}
+
+/* cursor blinking animation */
+@keyframes cursor {
+    50% {
+        border-color: transparent
+    }
+}
+
+/* Typing effect */
+@keyframes typing {
+    from {
+        width: 0
+    }
+
 }
 
 .add-new-project {
-    margin-top: 12vw;
     display: flex;
     justify-content: center;
     align-items: center;

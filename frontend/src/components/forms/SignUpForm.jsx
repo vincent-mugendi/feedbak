@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './SignUpForm.css';
 
 const SignUpForm = () => {
@@ -13,6 +14,7 @@ const SignUpForm = () => {
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
   const [successMessage, setSuccessMessage] = useState('');
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -44,6 +46,8 @@ const SignUpForm = () => {
       })
       .then(data => {
         console.log(data);
+        // Redirect to NewUserBody.jsx with user's first name as prop
+        navigate('/newuser', { state: { firstName: formData.firstName } });
         // Reset the form fields and show success message
         setFormData({
           firstName: '',
@@ -140,7 +144,6 @@ const SignUpForm = () => {
           value={formData.confirmPassword}
           onChange={handleChange}
           required
-          
         />
       </div>
       <button type="submit" disabled={loading}>

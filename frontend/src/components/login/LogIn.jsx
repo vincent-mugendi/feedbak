@@ -1,17 +1,17 @@
 import React from "react";
-import SignUpForm from "../forms/SignUpForm";
-import './SignUp.css';
+import LogInForm from "../forms/LogInForm";
+import './LogIn.css';
 import Header from "../header/Header";
 
 
-const SignUp = () => {
+const LogIn = () => {
     return (
         <div className="sign-up-page">
             <Header />
-            <SignUpForm />
+            <LogInForm />
             <p className="login"><a href="#">or Login</a></p>
         </div>    
         );
 }
 
-export default SignUp;
+export default LogIn;
